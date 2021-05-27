@@ -1,0 +1,91 @@
+﻿
+<!DOCTYPE html>
+<html id="home" lang="en">
+
+    <head>
+        <script>
+            if(!location.hash.replace('#', '').length) {
+                location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+                location.reload();
+            }
+        </script>
+
+        <title>WebRTC one-to-many broadcasting</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        
+        <style>
+            audio, video {
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                
+                -o-transition: all 1s ease;
+                -webkit-transition: all 1s ease;
+                transition: all 1s ease;
+                vertical-align: top;
+                
+                width: 45%;
+            }
+
+           input {
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+				height: 47px;
+				margin-right: 2px;
+                font-size: 2em;
+                margin: .2em;
+				vertical-align: 6px;
+                width: 30%;
+            }
+
+			.setup {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                font-size: 102%;
+                height: 47px;
+                margin-left: 2px;
+                margin-top: 8px;
+                position: absolute;
+            }
+			
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+        </style>
+        <script>
+            document.createElement('article');
+        </script>
+    </head>
+
+    <body>
+        <article>
+		    <header style="text-align: center;">
+                <h1>
+                    WebRTC双向流测试
+                </h1>                    
+            </header>
+			<section class="visible">
+                 <input type="text" id="conference-name">
+                 <button id="start-conferencing" class="setup">创建房间</button>
+            </section>
+            <table id="rooms-list" class="visible"></table>
+
+            <div id="participants"></div>
+
+            <script src="./adapter-latest.js"></script>
+            <script src="./socketio.js"> </script>
+            <script src="./RTCPeerConnection.js"> </script>
+            <script src="./broadcast.js"> </script>
+            <script src="./broadcast-ui.js"> </script>
+            <script src="./getStats.js"></script>x
+            <!-- <script src="./systemInfo.js"></script> -->
+        </article>
+    
+    </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "socketio-over-nodejs",
+  "subdomain": "socketio-over-nodejs",
+  "preferGlobal": true,
+  "version": "3.0.3",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "webrtc",
+    "javascript",
+    "io",
+    "socket",
+    "socket.io",
+    "socketio-over-nodejs",
+    "websockets",
+    "nodejs",
+    "node",
+    "node.js",
+    "webrtc-signaling",
+    "channels",
+    "namespaces",
+    "rooms",
+    "signalling",
+    "signaling"
+  ],
+  "analyze": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "socket.io": "0.9.x"
+  },
+  "_id": "socketio-over-nodejs@3.0.1",
+  "_from": "socketio-over-nodejs@"
+}
